@@ -1,0 +1,124 @@
+﻿docker pull nvcr.io/nvidia/tensorrt:21.09-py3
+/usr/local/bin//home/ubuntu18/home/ubuntu18
+sudo docker run --gpus all -it --rm -v  /home/ubuntu18/tensorRT_test:/mnt/test nvcr.io/nvidia/tensorrt:21.10-py3
+
+/home/ubuntu18/tensorRT_test:/mnt/test
+
+NGC API key
+ZXRuaWszaW9wY242YWZocWR2OGJwZzZycGI6YzZiZGZlMzAtZmU1helloworldNC00MWYxLWFhYWQtOGYzYjU2MDU2Njdl
+
+# install cuda and tensorrt
+# Add NVIDIA package repositories
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo apt-get update
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt-get update
+
+# Install NVIDIA driver
+sudo apt-get install --no-install-recommends nvidia-driver-430
+# Reboot. Check that GPUs are visible using the command: nvidia-smi
+
+# Install development and runtime libraries (~4GB)
+sudo apt-get install --no-install-recommends cuda-10-1 libcudnn7=7.6.4.38-1+cuda10.1 libcudnn7-dev=7.6.4.38-1+cuda10.1
+
+
+# Install TensorRT. Requires that libcudnn7 is installed above.
+sudo apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
+    libnvinfer-dev=6.0.1-1+cuda10.1 \
+    libnvinfer-plugin6=6.0.1-1+cuda10.1
+
+
+https://developer.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda-repo-ubuntu1804-10-1-local-10.1.105-418.39_1.0-1_amd64.deb
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo apt-get update
+wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
+sudo apt-get update
+
+# Install NVIDIA driver
+sudo apt-get install --no-install-recommends nvidia-driver-430
+# Reboot. Check that GPUs are visible using the command: nvidia-smi
+
+# Install development and runtime libraries (~4GB)
+sudo apt-get install --no-install-recommends \
+    cuda-10-1 \
+    libcudnn7=7.6.4.38-1+cuda10.1  \
+    libcudnn7-dev=7.6.4.38-1+cuda10.1
+
+
+# Install TensorRT. Requires that libcudnn7 is installed above.
+sudo apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
+    libnvinfer-dev=6.0.1-1+cuda10.1 \
+    libnvinfer-plugin6=6.0.1-1+cuda10.1
+
+
+
+
+
+# list of commands
+git clone https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3
+pip install -r ./requirements.txt
+
+
+wget -P model_data https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+apt-get update
+apt-get install -y libsm6 libxext6 libxrender-dev
+
+pip install opencv-python
+ln -s /usr/local/cuda-11/targets/x86_64-linux/lib/libcusolver.so.11 /usr/local/lib/python3.8/dist-packages/tensorflow/python/libcusolver.so.10
+
+
+
+# pip requirements
+pip install 
+pip install numpy>=1.18.2
+pip install scipy>=1.4.1
+pip install wget>=3.2
+pip install seaborn>=0.10.0
+pip install tensorflow==2.4.0
+pip install tensorflow-gpu==2.4.0
+pip install opencv-python==4.1.2.30
+pip install tqdm==4.43.0
+pip install pandas
+pip install awscli
+pip install urllib3
+pip install mss
+
+
+
+# download tensorrt7.2.1
+
+wget https://developer.nvidia.com/compute/machine-learning/tensorrt/secure/7.2.1/tars/TensorRT-7.2.1.6.Ubuntu-18.04.x86_64-gnu.cuda-11.0.cudnn8.0.tar.gz
+
+
+sudo docker cp /home/ubuntu18/Downloads/TensorRT-7.2.1.6.Ubuntu-18.04.x86_64-gnu.cuda-11.0.cudnn8.0.tar.gz 83061da3e4b5:/workspace
+
+apt-key add /var/nv-tensorrt-repo-ubuntu1804-cuda11.0-trt7.2.3.4-ga-20210226/7fa2af80.pub
+
+
+# config for yolov4 tensorrt
+
+apt-get update
+apt-get install nano
+apt-get install -y libsm6 libxext6 libxrender-dev
+
+git clone https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3
+
+
+cd TensorFlow-2.x-YOLOv3/
+
+pip install -r ./requirements.txt
+
+
+sudo docker run --gpus all -it --rm -v /home/ubuntu18/tensorRT_test:/workspace/falldown_model vsin_tensorrt6:latest
+
+
+
+
+
