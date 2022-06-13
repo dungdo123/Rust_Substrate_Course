@@ -2,6 +2,8 @@
 /usr/local/bin//home/ubuntu18/home/ubuntu18
 sudo docker run --gpus all -it --rm -v  /home/ubuntu18/tensorRT_test:/mnt/test nvcr.io/nvidia/tensorrt:21.10-py3
 
+helloworld k
+
 /home/ubuntu18/tensorRT_test:/mnt/test
 
 NGC API key
