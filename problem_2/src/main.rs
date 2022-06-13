@@ -17,9 +17,9 @@ fn main() {
     let contents = fs::read_to_string(filename)
         .expect("Something went wrong reading the file");
 
-    //check and count occurences
+    //check and count occurrences
     let c = contents.matches(&line).count();
 
-    println!("{}", c)
+    println!("number of occurrences is: {}", c)
 
 }
