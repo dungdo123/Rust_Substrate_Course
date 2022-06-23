@@ -9,3 +9,4 @@ Given a string str Slice as below. Enter any 1 word from the keyboard, print out
 https://ars.els-cdn.com/content/image/1-s2.0-S0960982203005347-mmc6.txt
 
 3. Problem 3: Ownership and borrowing in Rust
+4. Workshop 4: implement Iterator Trait for fibonacci struct, fixing lifetime errors.
